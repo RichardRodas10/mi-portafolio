@@ -68,7 +68,11 @@ const Inicio = () => {
           >
             Ver Proyectos
           </a>
-          <a href="/CV-Richard-Mauricio-Rodas-Carhuas.pdf" target="_blank" className="text-sm font-semibold text-white">
+         <a 
+            href="/CV-Richard-Mauricio-Rodas-Carhuas.pdf" 
+            download="CV-Richard-Rodas.pdf" 
+            className="text-sm font-semibold text-white flex items-center gap-1 hover:text-indigo-400 transition"
+          >
             Descargar CV <span aria-hidden="true">→</span>
           </a>
         </div>

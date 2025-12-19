@@ -4,19 +4,23 @@ import { ExternalLink, Github, Monitor, Tablet, Smartphone, Download } from 'luc
 import pcFertex from '../assets/proyectos/laptop-fertex.png';
 import tabletFertex from '../assets/proyectos/tablet-fertex.png';
 import movilFertex from '../assets/proyectos/movil-fertex.png';
+import movilUTP from '../assets/proyectos/movil-utp.png';
+import pcJuridico from '../assets/proyectos/laptop-juridico.png';
+import pcElectrof from '../assets/proyectos/pc-electrof.png';
+import pcMesaPartes from '../assets/proyectos/pc-mesapartes.png';
 
 const proyectos = [
   {
     id: 1,
     titulo: "Landing Page Fertex",
     tipo: "web",
-    descripcion: "Sistema Full-Stack para la gestión documental. Incluye validación de identidad y almacenamiento en la nube.",
+    descripcion: "Página informativa diseñada para la promoción de clases de Taekwondo. Implementa una navegación fluida tipo SPA con 7 componentes reutilizables y un diseño totalmente adaptable.",
     tags: [
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
     ],
-    repo: "https://github.com/RichardRodas10/mesa-de-partes.git",
-    demo: "https://mesa-de-partes-5c6c2.web.app/",
+    repo: "https://github.com/RichardRodas10/fertex",
+    demo: "https://fertex-67h9.vercel.app/",
     imagenes: {
       pc: pcFertex, 
       tablet: tabletFertex,
@@ -27,72 +31,74 @@ const proyectos = [
     id: 2,
     titulo: "Mesa de Partes Virtual",
     tipo: "web",
-    descripcion: "Sistema Full-Stack para la gestión documental. Incluye validación de identidad y almacenamiento en la nube.",
+    descripcion: "Sistema Full-Stack para gestión documental con autenticación de Firebase. Incluye validación de DNI en tiempo real, carga de documentos (PDF, Word, Excel) y un panel para seguimiento de trámites.",
     tags: [
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-      { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+      { name: "Html", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
     ],
     repo: "https://github.com/RichardRodas10/mesa-de-partes.git",
     demo: "https://mesa-de-partes-5c6c2.web.app/",
     imagenes: {
-      pc: pcFertex, 
-      tablet: tabletFertex,
-      movil: movilFertex
+      pc: pcMesaPartes, 
+      tablet: null,
+      movil: null
     }
   },
   {
     id: 3,
     titulo: "App de Salud UTP",
     tipo: "movil",
-    descripcion: "Aplicación móvil para el monitoreo fisiológico y comunicación médico-paciente.",
+    descripcion: "Aplicación móvil desarrollada en Kotlin con arquitectura MVVM. Permite el monitoreo de datos fisiológicos, mensajería directa médico-paciente y exportación de historiales en formatos PDF y CSV.",
     tags: [
       { name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
       { name: "Android", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" },
       { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
     ],
-    repo: "https://github.com/RichardRodas10/UTPsalud.git",
+    repo: "https://github.com/RichardRodas10/UTPsalud",
     demo: "https://drive.google.com/drive/folders/12Wb88-00u9dM0F2LU26TqubZkrorvsxt",
     imagenes: {
       pc: null,
       tablet: null,
-      movil: "https://tu-link-imagen-movil.png"
+      movil: movilUTP
     }
   },
   {
     id: 4,
     titulo: "Estudio Jurídico e Inmobiliario",
     tipo: "web",
-    descripcion: "Sistema Full-Stack para la gestión documental. Incluye validación de identidad y almacenamiento en la nube.",
+    descripcion: "Plataforma web con navegación dinámica sin recarga. Incluye modales interactivos para visualización de detalles legales y una estructura optimizada que reduce la duplicidad de código mediante componentes.",
     tags: [
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-      { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
     ],
-    repo: "https://github.com/RichardRodas10/mesa-de-partes.git",
-    demo: "https://mesa-de-partes-5c6c2.web.app/",
+    repo: "https://github.com/RichardRodas10/Estudio_Juridico",
+    demo: "https://estudio-juridico-sepia.vercel.app/#",
     imagenes: {
-      pc: pcFertex, 
-      tablet: tabletFertex,
-      movil: movilFertex
+      pc: pcJuridico, 
+      tablet: null,
+      movil: null
     }
   },
   {
     id: 5,
     titulo: "E-commerce Electrof",
     tipo: "web",
-    descripcion: "Sistema Full-Stack para la gestión documental. Incluye validación de identidad y almacenamiento en la nube.",
+    descripcion: "Sistema de comercio electrónico con gestión de inventario y usuarios. Implementa autenticación de sesiones, carrito de compras por categorías y generación automática de historial de compras en PDF.",
     tags: [
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-      { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
     ],
-    repo: "https://github.com/RichardRodas10/mesa-de-partes.git",
-    demo: "https://mesa-de-partes-5c6c2.web.app/",
+    repo: "https://github.com/RichardRodas10/Electrof",
+    demo: "https://rodas.infinityfreeapp.com//index.php?i=1",
     imagenes: {
-      pc: pcFertex, 
-      tablet: tabletFertex,
-      movil: movilFertex
+      pc: pcElectrof, 
+      tablet: null,
+      movil: null
     }
   }
 ];
@@ -106,9 +112,11 @@ const Proyectos = () => {
           <p className="mt-4 text-lg text-gray-400">Seleccionados para demostrar mis habilidades técnicas.</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div className="flex flex-wrap justify-center gap-12">
           {proyectos.map((proyecto) => (
-            <CardProyecto key={proyecto.id} proyecto={proyecto} />
+            <div key={proyecto.id} className="w-full lg:w-[calc(50%-24px)] max-w-2xl">
+              <CardProyecto proyecto={proyecto} />
+            </div>
           ))}
         </div>
       </div>
@@ -151,7 +159,7 @@ const CardProyecto = ({ proyecto }) => {
       </div>
 
       {/* Información */}
-      <div className="mt-8 flex flex-col flex-grow">
+      <div className="mt-8 flex flex-col grow">
         <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
           {proyecto.titulo}
         </h3>
