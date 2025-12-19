@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Inicio from './components/Inicio'
+import Proyectos from './components/Proyectos'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
 
@@ -10,6 +11,7 @@ function App() {
       
       <main className="grow">
         <Inicio />
+        <Proyectos />
         <Skills />
       </main>
 

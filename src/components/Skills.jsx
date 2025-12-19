@@ -48,7 +48,7 @@ const skillsData = [
                   key={group.category} 
                   className="flex flex-col rounded-2xl bg-gray-800/50 p-8 ring-1 ring-white/10 hover:bg-gray-800 transition-all duration-300 shadow-xl"
                 >
-                  <h3 className="text-xl font-bold text-white mb-8 border-b border-white/10 pb-4 tracking-wider uppercase text-center lg:text-left">
+                  <h3 className="text-xl font-bold text-white mb-8 border-b border-white/10 pb-4 tracking-wider uppercase text-center">
                     {group.category}
                   </h3>
                   <div className="grid grid-cols-3 gap-6">
