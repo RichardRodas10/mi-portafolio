@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Github, MessageCircle } from 'lucide-react';
+import miFoto from '../assets/perfil-richard.png'; 
 
 const redes = [
   { 
@@ -28,53 +29,69 @@ const Inicio = () => {
   return (
     <section id="inicio" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl lg:mx-0"> 
-          <h2 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
-            Ingeniero de Software & <span className="text-indigo-400">Desarrollador Frontend</span>
-          </h2>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-            Hola, soy <span className="text-white font-semibold">Richard Rodas</span>.
-            Egresado de Ingeniería de Software con experiencia en el desarrollo de 
-            soluciones web y móviles modernas. Me especializo en tecnologías como 
-            React, PHP y Kotlin.
-          </p>
-        </div>
-        
-        {/*Badges*/}
-        <div className="mt-10 flex flex-wrap gap-4">
-          {redes.map((red) => (
-            <a
-              key={red.name}
-              href={red.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`
-                flex items-center gap-2 rounded-full border border-white/10 bg-white/5 
-                px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-300
-                hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-white
-                ${red.colorHover || ''}
-              `}
-            >
-              {red.icon}
-              {red.name}
-            </a>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 items-center gap-y-12 lg:grid-cols-[1fr_auto]">
+          
+          <div className="order-2 lg:order-1">
+            <div className="lg:mx-0"> 
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-6xl">
+                Ingeniero de Software & <span className="text-indigo-400">Desarrollador Frontend</span>
+              </h2>
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+                Hola, soy <span className="text-white font-semibold">Richard Rodas</span>.
+                Egresado de Ingeniería de Software con experiencia en el desarrollo de 
+                soluciones web y móviles modernas. Me especializo en tecnologías como 
+                React, PHP y Kotlin.
+              </p>
+            </div>
+            
+            {/* Badges de Redes */}
+            <div className="mt-10 flex flex-wrap gap-4">
+              {redes.map((red) => (
+                <a
+                  key={red.name}
+                  href={red.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`
+                    flex items-center gap-2 rounded-full border border-white/10 bg-white/5 
+                    px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-300
+                    hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-white
+                    ${red.colorHover || ''}
+                  `}
+                >
+                  {red.icon}
+                  {red.name}
+                </a>
+              ))}
+            </div>
 
-        <div className="mt-10 flex items-center gap-x-6">
-          <a
-            href="#proyectos"
-            className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 transition"
-          >
-            Ver Proyectos
-          </a>
-         <a 
-            href="/CV-Richard-Mauricio-Rodas-Carhuas.pdf" 
-            download="CV-Richard-Rodas.pdf" 
-            className="text-sm font-semibold text-white flex items-center gap-1 hover:text-indigo-400 transition"
-          >
-            Descargar CV <span aria-hidden="true">→</span>
-          </a>
+            {/* Botones de Acción */}
+            <div className="mt-10 flex items-center gap-x-6">
+              <a 
+                href="/CV-Richard-Mauricio-Rodas-Carhuas.pdf" 
+                download="CV-Richard-Rodas.pdf" 
+                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 transition"
+              >
+                Descargar CV
+              </a>
+            </div>
+          </div>
+
+          {/* Columna de la Imagen */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end lg:pl-12">
+            <div className="relative group">
+              <div className="relative p-1.5 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-teal-400 shadow-2xl">
+                <div className="size-60 sm:size-80 lg:size-[400px] rounded-full border-4 border-gray-900 overflow-hidden bg-gray-800">
+                  <img 
+                    src={miFoto} 
+                    alt="Richard Rodas" 
+                    className="h-full w-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

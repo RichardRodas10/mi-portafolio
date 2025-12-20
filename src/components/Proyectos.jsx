@@ -104,6 +104,8 @@ const proyectos = [
 ];
 
 const Proyectos = () => {
+  const totalProyectos = proyectos.length;
+
   return (
     <section id="proyectos" className="bg-gray-900 py-18">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -112,30 +114,51 @@ const Proyectos = () => {
           <p className="mt-4 text-lg text-gray-400">Seleccionados para demostrar mis habilidades técnicas.</p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-12">
-          {proyectos.map((proyecto) => (
-            <div key={proyecto.id} className="w-full lg:w-[calc(50%-24px)] max-w-2xl">
-              <CardProyecto proyecto={proyecto} />
+        <div className="flex flex-col gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {proyectos.map((proyecto, index) => {
+              const esUltimoYHuertano = totalProyectos % 2 !== 0 && index === totalProyectos - 1;
+              
+              if (esUltimoYHuertano) return null;
+
+              return (
+                <div key={proyecto.id} className="w-full">
+                  <CardProyecto proyecto={proyecto} />
+                </div>
+              );
+            })}
+          </div>
+
+          {totalProyectos % 2 !== 0 && (
+            <div className="w-full">
+              <CardProyecto proyecto={proyectos[totalProyectos - 1]} esHorizontal={true} />
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>
   );
 };
 
-const CardProyecto = ({ proyecto }) => {
+const CardProyecto = ({ proyecto, esHorizontal = false }) => {
   const [vista, setVista] = useState(proyecto.imagenes.pc ? 'pc' : 'movil');
 
   return (
-    <div className="flex flex-col rounded-3xl bg-gray-800/30 border border-white/10 p-6 hover:border-indigo-500/30 transition-all duration-500 group">
+    <div className={`
+      flex rounded-3xl bg-gray-800/30 border border-white/10 p-6 
+      hover:border-indigo-500/30 transition-all duration-500 group
+      ${esHorizontal ? 'flex-col lg:flex-row gap-10' : 'flex-col'}
+    `}>
       
       {/* Visualizador Interactivo */}
-      <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-gray-950 flex items-center justify-center border border-white/5">
+      <div className={`
+        relative aspect-video overflow-hidden rounded-2xl bg-gray-950 flex items-center justify-center border border-white/5
+        ${esHorizontal ? 'w-full lg:w-1/2' : 'w-full'}
+      `}>
         <img 
           src={proyecto.imagenes[vista]} 
           alt={proyecto.titulo}
-          className={`h-full w-full object-contain p-4 transition-all duration-500`}
+          className="h-full w-full object-contain p-4 transition-all duration-500"
         />
 
         {/* Selector de Dispositivo */}
@@ -159,23 +182,18 @@ const CardProyecto = ({ proyecto }) => {
       </div>
 
       {/* Información */}
-      <div className="mt-8 flex flex-col grow">
+      <div className={`flex flex-col grow ${esHorizontal ? 'lg:justify-center lg:py-4' : 'mt-8'}`}>
         <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
           {proyecto.titulo}
         </h3>
         
-        {/* Tags con Color por Default */}
         <div className="mt-4 flex flex-wrap gap-2">
           {proyecto.tags.map((tag) => (
             <div 
               key={tag.name} 
               className="flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full"
             >
-              <img 
-                src={tag.icon} 
-                alt="" 
-                className="size-3.5"
-              />
+              <img src={tag.icon} alt="" className="size-3.5" />
               <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-300">
                 {tag.name}
               </span>
@@ -183,20 +201,15 @@ const CardProyecto = ({ proyecto }) => {
           ))}
         </div>
 
-        <p className="mt-4 text-gray-400 text-sm leading-relaxed grow">
+        <p className={`mt-4 text-gray-400 text-sm leading-relaxed grow ${esHorizontal ? 'max-w-xl' : ''}`}>
           {proyecto.descripcion}
         </p>
 
-        {/* Botones de Acción Dinámicos */}
-        <div className="mt-8 grid grid-cols-2 gap-4">
-          <a href={proyecto.demo} target="_blank" className="flex items-center justify-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/20 py-2.5 text-sm font-bold text-teal-400 hover:bg-teal-500 hover:text-white transition-all">
-            {proyecto.tipo === 'web' ? (
-              <><ExternalLink className="size-4" /> Sitio Web</>
-            ) : (
-              <><Download className="size-4" /> APK Móvil</>
-            )}
+        <div className={`mt-8 grid grid-cols-2 gap-4 ${esHorizontal ? 'lg:max-w-sm' : ''}`}>
+          <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/20 py-2.5 text-sm font-bold text-teal-400 hover:bg-teal-500 hover:text-white transition-all">
+            {proyecto.tipo === 'web' ? <><ExternalLink className="size-4" /> Sitio Web</> : <><Download className="size-4" /> APK Móvil</>}
           </a>
-          <a href={proyecto.repo} target="_blank" className="flex items-center justify-center gap-2 rounded-xl bg-white/5 border border-white/10 py-2.5 text-sm font-bold text-white hover:bg-white/10 transition-all">
+          <a href={proyecto.repo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-white/5 border border-white/10 py-2.5 text-sm font-bold text-white hover:bg-white/10 transition-all">
             <Github className="size-4" /> GitHub
           </a>
         </div>

@@ -1,9 +1,9 @@
 const navigation = [
   { name: 'Inicio', href: '#inicio' },
   { name: 'Proyectos', href: '#proyectos' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Sobre Mí', href: '#sobre-mi' },
   { name: 'Certificaciones', href: '#certificaciones' },
-  { name: 'Skills', href: '#skills' },
 ];
 
 const Header = () => {
