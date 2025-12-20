@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Inicio from './components/Inicio'
 import Proyectos from './components/Proyectos'
 import Skills from './components/Skills'
+import SobreMi from './components/SobreMi'
 import Footer from './components/Footer'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       
       <main className="grow">
         <Inicio />
+        <SobreMi />
         <Proyectos />
         <Skills />
       </main>

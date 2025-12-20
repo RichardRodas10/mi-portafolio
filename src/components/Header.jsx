@@ -1,9 +1,10 @@
+import logo from '../assets/rodas-dev.svg';
+
 const navigation = [
   { name: 'Inicio', href: '#inicio' },
+  { name: 'Sobre Mí', href: '#sobre-mi' },
   { name: 'Proyectos', href: '#proyectos' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Sobre Mí', href: '#sobre-mi' },
-  { name: 'Certificaciones', href: '#certificaciones' },
 ];
 
 const Header = () => {
@@ -25,8 +26,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/5">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" className="h-8 w-auto" />
+          <a href="#inicio" className="-m-1.5 p-1.5">
+            <img src={logo} alt="rodas.dev logo" className="h-10 w-auto" />
           </a>
         </div>
         
@@ -49,7 +50,7 @@ const Header = () => {
         
         <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-base font-semibold text-gray-300 hover:text-indigo-400 transition-colors">
+                <a key={item.name} href={item.href} className="text-base font-semibold text-gray-300 hover:text-blue-400 transition-colors">
                   {item.name}
                 </a>
             ))}
@@ -73,7 +74,7 @@ const Header = () => {
                     <a 
                       key={item.name} 
                       href={item.href} 
-                      className="block text-2xl font-bold tracking-tight text-white hover:text-indigo-400 py-2 transition-all"
+                      className="block text-2xl font-bold tracking-tight text-white hover:text-blue-400 py-2 transition-all"
                       onClick={closeMenu}
                     >
                       {item.name}

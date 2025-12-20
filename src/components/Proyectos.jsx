@@ -146,7 +146,7 @@ const CardProyecto = ({ proyecto, esHorizontal = false }) => {
   return (
     <div className={`
       flex rounded-3xl bg-gray-800/30 border border-white/10 p-6 
-      hover:border-indigo-500/30 transition-all duration-500 group
+      hover:border-blue-500/30 transition-all duration-500 group
       ${esHorizontal ? 'flex-col lg:flex-row gap-10' : 'flex-col'}
     `}>
       
@@ -164,17 +164,17 @@ const CardProyecto = ({ proyecto, esHorizontal = false }) => {
         {/* Selector de Dispositivo */}
         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 bg-gray-900/60 backdrop-blur-md p-2 rounded-xl border border-white/10 group-hover:opacity-100 transition-opacity">
           {proyecto.imagenes.pc && (
-            <button onClick={() => setVista('pc')} className={`p-2 rounded-lg transition ${vista === 'pc' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-white'}`}>
+            <button onClick={() => setVista('pc')} className={`p-2 rounded-lg transition ${vista === 'pc' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'}`}>
               <Monitor className="size-4" />
             </button>
           )}
           {proyecto.imagenes.tablet && (
-            <button onClick={() => setVista('tablet')} className={`p-2 rounded-lg transition ${vista === 'tablet' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-white'}`}>
+            <button onClick={() => setVista('tablet')} className={`p-2 rounded-lg transition ${vista === 'tablet' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'}`}>
               <Tablet className="size-4" />
             </button>
           )}
           {proyecto.imagenes.movil && (
-            <button onClick={() => setVista('movil')} className={`p-2 rounded-lg transition ${vista === 'movil' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-white'}`}>
+            <button onClick={() => setVista('movil')} className={`p-2 rounded-lg transition ${vista === 'movil' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'}`}>
               <Smartphone className="size-4" />
             </button>
           )}
@@ -183,7 +183,7 @@ const CardProyecto = ({ proyecto, esHorizontal = false }) => {
 
       {/* Información */}
       <div className={`flex flex-col grow ${esHorizontal ? 'lg:justify-center lg:py-4' : 'mt-8'}`}>
-        <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+        <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
           {proyecto.titulo}
         </h3>
         
@@ -191,10 +191,10 @@ const CardProyecto = ({ proyecto, esHorizontal = false }) => {
           {proyecto.tags.map((tag) => (
             <div 
               key={tag.name} 
-              className="flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full"
+              className="flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full"
             >
               <img src={tag.icon} alt="" className="size-3.5" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-300">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">
                 {tag.name}
               </span>
             </div>
@@ -206,7 +206,7 @@ const CardProyecto = ({ proyecto, esHorizontal = false }) => {
         </p>
 
         <div className={`mt-8 grid grid-cols-2 gap-4 ${esHorizontal ? 'lg:max-w-sm' : ''}`}>
-          <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/20 py-2.5 text-sm font-bold text-teal-400 hover:bg-teal-500 hover:text-white transition-all">
+          <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-blue-500/10 border border-blue-500/20 py-2.5 text-sm font-bold text-blue-400 hover:bg-blue-500 hover:text-white transition-all">
             {proyecto.tipo === 'web' ? <><ExternalLink className="size-4" /> Sitio Web</> : <><Download className="size-4" /> APK Móvil</>}
           </a>
           <a href={proyecto.repo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-white/5 border border-white/10 py-2.5 text-sm font-bold text-white hover:bg-white/10 transition-all">
