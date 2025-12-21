@@ -45,7 +45,7 @@ const SobreMi = () => {
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p className="text-lg">
               Mi trayectoria en el desarrollo de software comenzó en la <span className="text-white font-semibold">Universidad 
-              Tecnológica del Perú</span>, donde me gradué como Ingeniero de Software. Durante mi formación, 
+              Tecnológica del Perú</span>, donde egresé como Ingeniero de Software. Durante mi formación, 
               descubrí que mi verdadera pasión va más allá de escribir código: es crear experiencias digitales 
               que resuelvan problemas reales y mejoren la vida de las personas.
             </p>
