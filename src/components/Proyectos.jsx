@@ -107,7 +107,7 @@ const Proyectos = () => {
   const totalProyectos = proyectos.length;
 
   return (
-    <section id="proyectos" className="bg-gray-900 py-18">
+    <section id="proyectos" className="bg-gray-900 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Proyectos</h2>

@@ -25,7 +25,7 @@ const SobreMi = () => {
   ];
 
   return (
-    <section id="sobre-mi" className="bg-gray-900 py-24 sm:py-32">
+    <section id="sobre-mi" className="bg-gray-900 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* Header */}
@@ -89,7 +89,7 @@ const SobreMi = () => {
                   className="group relative bg-gray-800/30 border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 p-3 rounded-xl bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20 transition-colors">
+                    <div className="shrink-0 p-3 rounded-xl bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20 transition-colors">
                       {valor.icon}
                     </div>
                     <div>
