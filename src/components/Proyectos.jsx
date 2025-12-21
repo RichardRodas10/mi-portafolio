@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Monitor, Tablet, Smartphone, Download } from 'lucide-react';
 
-import pcFertex from '../assets/proyectos/laptop-fertex.png';
-import tabletFertex from '../assets/proyectos/tablet-fertex.png';
-import movilFertex from '../assets/proyectos/movil-fertex.png';
-import movilUTP from '../assets/proyectos/movil-utp.png';
-import pcJuridico from '../assets/proyectos/laptop-juridico.png';
-import pcElectrof from '../assets/proyectos/pc-electrof.png';
-import pcMesaPartes from '../assets/proyectos/pc-mesapartes.png';
+import pcFertex from '../assets/proyectos/laptop-fertex.webp';
+import tabletFertex from '../assets/proyectos/tablet-fertex.webp';
+import movilFertex from '../assets/proyectos/movil-fertex.webp';
+import movilUTP from '../assets/proyectos/movil-utp.webp';
+import pcJuridico from '../assets/proyectos/laptop-juridico.webp';
+import pcElectrof from '../assets/proyectos/pc-electrof.webp';
+import pcMesaPartes from '../assets/proyectos/pc-mesapartes.webp';
 
 const proyectos = [
   {

@@ -1,5 +1,5 @@
 import { Linkedin, Mail, Github, MessageCircle, Download } from 'lucide-react';
-import miFoto from '../assets/perfil-richard.png'; 
+import miFoto from '../assets/perfil-richard.webp'; 
 
 const redes = [
   { 
@@ -32,10 +32,10 @@ const redes = [
 const Inicio = () => {
   return (
     <section id="inicio" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-y-12 lg:grid-cols-[1fr_auto]">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-y-8 lg:grid-cols-[1fr_auto] lg:gap-x-0">
           
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 lg:max-w-2xl">
             <div className="lg:mx-0"> 
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
                 Ingeniero de Software & <span className="text-blue-400">Desarrollador Frontend</span>
@@ -84,7 +84,7 @@ const Inicio = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end lg:pl-12">
             <div className="relative group">
               <div className="relative p-1.5 rounded-full bg-gradient-to-tr from-blue-500 via-blue-600 to-cyan-500 shadow-2xl">
-                <div className="size-60 sm:size-80 lg:size-[400px] rounded-full border-4 border-gray-900 overflow-hidden bg-gray-800">
+                <div className="size-60 sm:size-80 lg:size-87.5 rounded-full border-4 border-gray-900 overflow-hidden bg-gray-800">
                   <img 
                     src={miFoto} 
                     alt="Richard Rodas" 
